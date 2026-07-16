@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>更新日志 - 版本 2.5.9.4</title>
+    <title>更新日志 - 版本 2.5.10.0</title>
     <style>
         body {
             font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
@@ -46,10 +46,11 @@
 <body>
     <div class="container">
         <h1>更新日志</h1>
-        <p><span class="version">版本 2.5.9.4</span></p>
+        <p><span class="version">版本 2.5.10.0</span></p>
         <ul>
-            <li>技术性修改-明确，温漂数据为正时，温漂公式为：Kt(Ti-T0),反之 Kt(T0-Ti)
-                修复了部分文本缺失的BUG</li>
+            <li>数据库升级：率定表 CalibrationData 新增可空字段「订单号」（OrderNumber），与仪器编号、仪器名称共同标识仪器；历史数据自动迁移，迁移过程显示进度提示</li>
+            <li>仪器入库时，将报告编号（ReportNo）作为订单号写入；同一仪器编号在不同订单下可分别存取，互不覆盖</li>
+            <li>设备列表增加订单号列展示，删除时按订单号精确匹配</li>
         </ul>
         <div class="footer">
             感谢您的使用与支持！
